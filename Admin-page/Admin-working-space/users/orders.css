@@ -1,0 +1,20 @@
+.allBox {
+  display: grid;
+  grid-template-columns: 30px 300px 300px 300px;
+  font-weight: bold;
+  div {
+    border: solid;
+    padding: 5px;
+    border-left: none;
+    border-top: 0;
+  }
+  .box1 {
+    text-align: center;
+    border-left: solid;
+  }
+}
+#allBox0 {
+  div {
+    border-top: solid;
+  }
+}

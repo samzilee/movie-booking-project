@@ -1,0 +1,346 @@
+:root {
+  --hover: #17c769;
+  --inactive: #a1d9be;
+  --disabled: #d5e5fd;
+}
+body {
+  background-image: url(image/bg.png.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: arial;
+}
+.container {
+  height: 100vh;
+  overflow-x: scroll;
+}
+button {
+  cursor: pointer;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  position: relative;
+}
+.left-section {
+  padding-left: 20px;
+  cursor: pointer;
+  img {
+    width: 70px;
+  }
+}
+#middleSection {
+  position: absolute;
+  padding: 20px;
+  background-color: var(--hover);
+  top: -150%;
+  right: 60%;
+  border-radius: 10px;
+  transition: all 0.5s;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  pointer-events: none;
+}
+.right-section {
+  padding-right: 20px;
+  display: flex;
+  gap: 7px;
+  input {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .login {
+    background-color: rgb(120, 225, 120);
+    border: none;
+    color: white;
+  }
+
+  .reg {
+    background-color: transparent;
+    border: solid white 1px;
+    color: white;
+  }
+
+  .login:hover,
+  .reg:hover {
+    background-color: var(--hover);
+  }
+  .myTicket {
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+  .logout {
+    background-color: red;
+    border: none;
+    color: white;
+  }
+  .myTicket:active {
+    color: grey;
+  }
+  .logout:active {
+    background-color: rgba(255, 0, 0, 0.449);
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    color: white;
+    margin-bottom: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  #list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 60%;
+    gap: 20px;
+    #texts {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: red;
+    }
+    .movie {
+      cursor: pointer;
+      padding: 10px;
+      padding-bottom: 20px;
+      border: solid white;
+      border-radius: 10px;
+      width: 150px;
+      height: 250px;
+      position: relative;
+      img {
+        width: 100%;
+        transition: all 0.5s;
+      }
+      p {
+        color: white;
+        text-align: center;
+      }
+      .more-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s ease;
+        font-size: 0.7rem;
+        .date,
+        .where {
+          margin-bottom: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+    .movie:active {
+      background-color: rgb(65, 65, 65);
+    }
+    .movie:hover {
+      img {
+        width: 50%;
+      }
+      .more-info {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#bookingPage {
+  padding-left: 40px;
+  padding-top: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.theater {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .location {
+    display: flex;
+    gap: 10px;
+    img {
+      width: 17px;
+    }
+    button {
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px;
+      padding-right: 10px;
+      border: solid white 1px;
+      border-radius: 20px;
+      color: white;
+    }
+    .btnClick {
+      background-color: var(--hover);
+      border: none;
+    }
+  }
+}
+
+.when {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 70px;
+  .date {
+    display: flex;
+    gap: 10px;
+    width: 100px;
+    div {
+      width: 100%;
+      border: solid;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      span {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      p {
+        font-weight: bold;
+      }
+    }
+    .btnClick {
+      background-color: var(--hover);
+      border: none;
+    }
+  }
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 70px;
+  .clock {
+    display: flex;
+    gap: 10px;
+    width: 100px;
+    div {
+      width: 100%;
+      border: solid white 1px;
+      padding: 7px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      p {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+    }
+    .btnClick {
+      background-color: var(--hover);
+      border: none;
+    }
+  }
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+  img {
+    width: 150px;
+  }
+  .movie-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    p {
+      font-weight: bold;
+      width: 200px;
+    }
+    .more-details {
+      position: relative;
+      cursor: pointer;
+      p {
+        font-size: 0.7rem;
+        color: rgb(194, 194, 194);
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .description {
+        position: absolute;
+        bottom: 0;
+        border: solid;
+        left: 80%;
+        bottom: 100%;
+        padding: 10px;
+        height: fit-content;
+        width: 400px;
+        border-radius: 10px;
+        border: solid 1px;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.5s;
+        pointer-events: none;
+      }
+    }
+    .more-details:hover {
+      .description {
+        opacity: 1;
+        height: fit-content;
+        width: 400px;
+      }
+    }
+  }
+}
+section {
+  flex: 1;
+  nav {
+    border: solid white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 300px;
+    gap: 10px;
+    border-radius: 10px;
+    h1 {
+      font-size: 2rem;
+    }
+    div {
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    span {
+      font-size: 0.7rem;
+      color: grey;
+    }
+    button {
+      padding: 7px;
+      font-weight: bold;
+      color: white;
+      background-color: var(--disabled);
+      border: none;
+      border-radius: 5px;
+      pointer-events: none;
+    }
+    button:active {
+      background-color: var(--inactive);
+    }
+  }
+}

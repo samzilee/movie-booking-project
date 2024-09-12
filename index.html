@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOKOTO CINEMA</title>
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./general.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="left-section" id="home">
+          <img src="icons/duaAsset 1logo 1.png" alt="logo" />
+        </div>
+        <div id="middleSection"></div>
+        <div class="right-section">
+          <a href="login-page/login.html" target="_self">
+            <input class="login" type="button" value="Login" />
+          </a>
+          <a href="sign-in-page/sign-in.html" target="_self">
+            <input class="reg" type="button" value="Register" />
+          </a>
+        </div>
+      </header>
+      <div id="mainpage">
+        <main>
+          <h2>NOW SHOWING IN SOKOTO CINEMA</h2>
+          <!-- <h2></h2> -->
+          <nav id="list"></nav>
+        </main>
+      </div>
+
+      <div id="bookingPage">
+        <section>
+          <div class="theater">
+            <h1>Theater</h1>
+            <div class="location" id="theater"></div>
+          </div>
+          <div class="when">
+            <h1>Date</h1>
+            <div class="date" id="date"></div>
+          </div>
+
+          <div class="time">
+            <h1>Time</h1>
+            <div class="clock" id="time"></div>
+          </div>
+        </section>
+        <section id="movie-description"></section>
+      </div>
+    </div>
+    <script src="home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+.spinner {
+  width: 11.2px;
+  height: 11.2px;
+  border-radius: 11.2px;
+  box-shadow: 28px 0px 0 0 rgba(71, 255, 154, 0.2),
+    22.7px 16.5px 0 0 rgba(71, 255, 154, 0.4),
+    8.68px 26.6px 0 0 rgba(71, 255, 154, 0.6),
+    -8.68px 26.6px 0 0 rgba(71, 255, 154, 0.8), -22.7px 16.5px 0 0 #47ff9a;
+  animation: spinner-b87k6z 1s infinite linear;
+}
+
+@keyframes spinner-b87k6z {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#spinnerHolder {
+  border: solid;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --hover: #17c769;
+  --inactive: #a1d9be;
+  --disabled: #d5e5fd;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.left-side {
+  flex: 1;
+  background-image: url(../image/bg.signup.png.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  header {
+    padding-top: 10px;
+    img {
+      width: 70px;
+    }
+  }
+  footer {
+    padding: 15px;
+    color: white;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      width: 70%;
+      font-size: 2.6rem;
+      opacity: 0.9;
+      .op1 {
+        opacity: 0.8;
+      }
+      .op2 {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  form {
+    height: 400px;
+    main {
+      margin-bottom: 20px;
+      .form-input1,
+      .form-input2 {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p {
+          font-size: 0.9rem;
+          color: rgb(95, 95, 95);
+        }
+        input {
+          padding: 8px 4px;
+          width: 400px;
+          border-radius: 5px;
+          border: solid 1px rgba(128, 128, 128, 0.774);
+          margin-bottom: 5px;
+        }
+      }
+      .form-input2 {
+        margin-top: 15px;
+      }
+    }
+  }
+  footer {
+    #form-notification {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: bold;
+      text-align: center;
+      color: red;
+    }
+    input {
+      width: 100%;
+      height: 40px;
+      color: white;
+      background-color: var(--hover);
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    input:active {
+      background-color: var(--inactive);
+    }
+    p {
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.4;
+      font-weight: bold;
+      span {
+        opacity: 1;
+        color: green;
+        cursor: pointer;
+      }
+      span:active {
+        color: var(--inactive);
+      }
+    }
+  }
+}

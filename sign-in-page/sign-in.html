@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sign-in.css" />
+    <link rel="stylesheet" href="../general.css" />
+    <title>sign-in</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <aside class="left-side">
+        <header>
+          <img src="../icons/duaAsset 1logo 1.png" />
+        </header>
+        <footer>
+          <h1>Welcome To BookMo</h1>
+          <p>
+            Begin your cinematic
+            <span class="op1">adventure now with</span>
+            <span class="op2">our ticketing platform!</span>
+          </p>
+        </footer>
+      </aside>
+      <aside class="right-side">
+        <form>
+          <h2>Create an account</h2>
+          <div></div>
+          <main>
+            <div class="form-input1">
+              <p>User Name / Email</p>
+              <input
+                type="text"
+                placeholder="User Name"
+                id="user Name"
+                required
+              />
+              <input
+                id="emailInput"
+                type="email"
+                placeholder="me@gmail.com"
+                required
+              />
+            </div>
+            <div class="form-input2">
+              <p>Password</p>
+              <input
+                id="pass1"
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
+              <input
+                id="pass2"
+                type="password"
+                placeholder="Comfirm your password"
+                required
+              />
+            </div>
+          </main>
+          <footer>
+            <p id="form-notification"></p>
+            <input id="create" type="button" value="Create account" />
+            <p>Already Have An Account ? <span id="log">Log in</span></p>
+          </footer>
+        </form>
+      </aside>
+    </div>
+    <script src="sign-in.js"></script>
+  </body>
+</html>

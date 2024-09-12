@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./movie.css" />
+    <link rel="stylesheet" href="./users/orders.css" />
+    <title>Admin Page...</title>
+  </head>
+  <body>
+    <div class="conatiner" id="all">
+      <header>
+        <div>
+          <div class="icon" id="icon-color-change">
+            <p>a</p>
+          </div>
+          <p>administrator</p>
+        </div>
+      </header>
+      <aside>
+        <nav>
+          <div id="movies">
+            <p>Movie</p>
+          </div>
+          <div id="users">
+            <p>Users</p>
+          </div>
+          <div id="orders">
+            <p>Orders</p>
+          </div>
+        </nav>
+      </aside>
+      <main class="mainBody" id="mainPage"></main>
+    </div>
+    <div id="addMovie">
+      <div class="AddHeader">
+        <p>Edit Movie</p>
+        <p id="cancel">X</p>
+      </div>
+      <main class="pagemain">
+        <div class="movieInfo">
+          <label>
+            <p>Movie Title</p>
+            <input id="movieTitle" type="text" required />
+          </label>
+          <label>
+            <p>Description</p>
+            <input id="movieDescription" type="text" required />
+          </label>
+        </div>
+        <div class="duration">
+          <div class="shotInput">
+            <p>Duration</p>
+            <div class="time">
+              <input id="hour" type="number" required />
+              <input id="min" type="number" required />
+            </div>
+          </div>
+          <div class="shotInput">
+            <p>Movie Type</p>
+            <div class="type">
+              <input id="type" type="text" required />
+            </div>
+          </div>
+        </div>
+        <div class="movieInfo">
+          <label>
+            <p>Show Month</p>
+            <input id="month" type="text" required />
+          </label>
+
+          <label>
+            <p>Show Day</p>
+            <input id="day" type="text" required />
+          </label>
+
+          <label>
+            <p>Location</p>
+            <input
+              id="location"
+              type="text"
+              value="Available now in Sokoto cinema"
+              readonly
+            />
+          </label>
+
+          <label>
+            <p>Time</p>
+            <input id="time" type="time" required />
+          </label>
+        </div>
+        <div id="img">
+          <!-- <img src="" alt="movie_img" /> -->
+        </div>
+        <div class="upload">
+          <p>Cover image</p>
+          <button id="imgUpload">Upload</button>
+          <input id="submitImg" type="file" required />
+        </div>
+      </main>
+      <label class="footer">
+        <button id="saveMovie">Save</button>
+      </label>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

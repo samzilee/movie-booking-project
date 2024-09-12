@@ -1,0 +1,87 @@
+.progress {
+  width: 100.8px;
+  height: 16.8px;
+  -webkit-mask: linear-gradient(90deg, #349638 70%, #0000 0) left/20% 100%;
+  background: linear-gradient(#349638 0 0) left/0% 100% no-repeat #dbdcef;
+  animation: progress-422c3u 2s infinite steps(6);
+}
+
+@keyframes progress-422c3u {
+  100% {
+    background-size: 120% 100%;
+  }
+}
+
+:root {
+  --hover: #17c769;
+  --inactive: #a1d9be;
+  --disabled: #d5e5fd;
+}
+body {
+  background-image: url("../image/bg.png.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Notification {
+  position: absolute;
+  background-color: var(--hover);
+  width: 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0px 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  top: -10%;
+  transition: all 0.5s;
+}
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 400px;
+
+  .otp-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    div {
+      border: solid rgba(255, 255, 255, 0.589) 1px;
+      width: 50px;
+      height: 40px;
+      border-radius: 6px;
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+  input {
+    width: 200px;
+    margin-top: 50px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--hover);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input:active {
+    background-color: var(--inactive);
+  }
+}
